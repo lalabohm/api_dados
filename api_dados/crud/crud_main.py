@@ -22,7 +22,7 @@ def update_dados(id_in, model, novos_dados):
         registro = session.query(model).filter_by(id=id_in).first()
         if registro:
             for key, value in novos_dados.items():
-                setattr(registro, key, value)  # Atualiza os atributos do registro com os novos valores
+                setattr(registro, key, value) 
             session.commit()
             return 'Registro atualizado com sucesso!'
         else:
